@@ -15,6 +15,8 @@ BuildRequires:  libdb-devel
 BuildRequires:  gcc
 
 Requires:       gcc
+Requires:       gmp-devel
+Requires:       libdb-devel
 
 
 %description
