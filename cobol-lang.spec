@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 %global compdir gnucobol-2.2
 
-Name:		    GnuCOBOL
+Name:           GnuCOBOL
 Version:        2.2
 Release:        1%{?dist}
 Summary:        GnuCOBOL is a free implementation of the COBOL programming language.
@@ -18,8 +18,9 @@ Requires:       gcc
 
 
 %description
-GnuCOBOL (formerly OpenCOBOL) is 
-a free implementation of the COBOL programming language.
+GnuCOBOL is a free software COBOL compiler. 
+cobc translates COBOL source code to native executable using intermediate C, 
+designated C compiler and linker.
 
 
 %prep
@@ -27,7 +28,7 @@ a free implementation of the COBOL programming language.
 
 
 %build
-./configure --prefix=/usr --libdir=/usr/lib64
+./configure --prefix=/usr --libdir=%{_libdir}
 make
 
 %install
@@ -66,4 +67,4 @@ make
 
 %changelog
 * Sat Apr 11 2020 Ron Olson <tachoknight@fedoraproject.org> 2.2-1
-- First version
+- Intitial version
