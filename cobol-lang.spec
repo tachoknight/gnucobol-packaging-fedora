@@ -1,4 +1,3 @@
-%global debug_package %{nil}
 Name:           gnucobol
 Version:        2.2
 Release:        1%{?dist}
@@ -28,7 +27,6 @@ designated C compiler and linker.
 %package devel
 Summary:    Headers and library files for GnuCOBOL
 
-Provides:   %{name}-devel = %{version}-%{release}
 
 %description devel
 Headers and libraries for building GnuCOBOL programs
@@ -39,7 +37,7 @@ Headers and libraries for building GnuCOBOL programs
 %patch0 -p0
 
 %build
-%configure --prefix=/usr --libdir=%{_libdir}
+%configure --enable-debug
 make
 
 %install
