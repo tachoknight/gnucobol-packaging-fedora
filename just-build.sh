@@ -7,6 +7,7 @@ START_TS=`date`
 rm -rf /home/rolson/rpmbuild
 mkdir -p /home/rolson/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 cp $PWD/cobol-lang.spec /home/rolson/rpmbuild/SPECS
+cp $PWD/*.patch /home/rolson/rpmbuild/SOURCES
 
 pushd /home/rolson/rpmbuild/SPECS
 spectool -g -R ./cobol-lang.spec
